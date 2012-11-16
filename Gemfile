@@ -6,9 +6,10 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-group :development, :test do
+group :development do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.9.0'
+  gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -27,7 +28,14 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'rspec-rails', '2.9.0'
   gem 'capybara', '1.1.2'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+  gem 'rb-fchange', '0.0.5'
+  gem 'rb-notifu', '0.0.4'
+  gem 'win32console', '1.3.0'
+  gem 'wdm', '0.0.3'
 end
 
 group :production do
