@@ -31,7 +31,8 @@ describe "User Pages" do
 
   		describe "display error messages" do
   			before { click_button submit }
-  				
+  			
+  			it { should have_selector('h1', text: "Sign Up")}
   			it { should have_selector("li", text: "Email is invalid") }
   			
   		end
@@ -50,8 +51,9 @@ describe "User Pages" do
   			expect { click_button submit }.to change(User, :count).by(1)
   		end
 
-  		describe "should redirect to user profile" do
+  		describe "after saving the user" do
   			before { click_button submit }
+  			
   			it { should have_selector('h1', text: "Example User") }
   			it { should have_selector('.alert-success', text: "Welcome to the Sample App!") }
   		end
