@@ -56,7 +56,9 @@ describe "User Pages" do
   			
   			it { should have_selector('h1', text: "Example User") }
   			it { should have_selector('.alert-success', text: "Welcome to the Sample App!") }
+        it { should have_link('Sign out') }
   		end
+
   	end
 
   end
